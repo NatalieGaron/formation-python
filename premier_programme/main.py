@@ -52,6 +52,28 @@ def demander_age(nom_personne):
 
 # -----------------------------------------------------------------------
 
+# Pour comprendre comment fonctionne le keyword global
+# Dès que tu réaffectes (fais un = sur) une variable globale à l'intérieur d'une fonction, tu dois utiliser 
+# le keyword global mais ce n'est pas nécessaire si on ne fait que la lire.
+# Par contre, si la variable contient un objet modifiable (liste, dictionnaire, etc.) et que tu modifies 
+# l'objet sans faire de réaffectation, global n'est pas nécessaire
+# ex.  noms = ["Alice", "Bob"]
+#      def ajouter_nom():
+#        noms.append("Charlie")
+""" 
+age = 0
+
+def demander_Age():
+  global age
+  while age == 0:
+    try:
+      age = int(input("Quel est votre age ? "))
+    except ValueError:
+      print("ERREUR: L'âge doit être un nombre entier.")
+
+demander_Age()
+""" 
+
 """ 
 nom1 = demander_nom()
 nom2 = demander_nom()

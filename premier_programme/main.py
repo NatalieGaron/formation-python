@@ -74,6 +74,14 @@ def demander_Age():
 demander_Age()
 """ 
 
+# Demande d'un mot de passe à l'usager
+""" 
+mot_de_passe = ""
+while not mot_de_passe == "toto":
+  mot_de_passe = input("Quel est le mot de passe ? ")
+print("Mot de passe correct. Bienvenue !")
+"""
+
 """ 
 nom1 = demander_nom()
 nom2 = demander_nom()
